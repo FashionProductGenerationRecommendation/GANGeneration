@@ -114,10 +114,10 @@ if dataset == '102flowers':
 
     print("n_captions: %d n_images: %d n_captions_per_image: %d" % (n_captions, n_images, n_captions_per_image))
 
-    captions_ids_train, captions_ids_test = captions_ids[: 38500*n_captions_per_image], captions_ids[38500*n_captions_per_image :]
-    images_train, images_test = images[:38500], images[38500:]
+    captions_ids_train, captions_ids_test = captions_ids[: 7700*n_captions_per_image], captions_ids[7700*n_captions_per_image :]
+    images_train, images_test = images[:7700], images[7700:]
     if need_256:
-        images_train_256, images_test_256 = images_256[:38500], images_256[38500:]
+        images_train_256, images_test_256 = images_256[:7700], images_256[7700:]
     n_images_train = len(images_train)
     n_images_test = len(images_test)
     n_captions_train = len(captions_ids_train)

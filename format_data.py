@@ -19,7 +19,7 @@ for i in range(0,len(style)):
 text_path = 'text_c10/text/'
 list_of = []
 for i,(key,value) in enumerate(dict_.items()):
-    if len(list_of)<=40000 and key not in list_of:
+    if len(list_of)<=8000 and key not in list_of:
         list_of.append(key)
         file_name = "image_"+str(key)+".txt"
         file1 = open(text_path+file_name,"w")
