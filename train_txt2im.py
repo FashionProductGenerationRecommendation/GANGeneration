@@ -157,7 +157,7 @@ def main_train():
         # print(sample_sentence[i])
     sample_sentence = tl.prepro.pad_sequences(sample_sentence, padding='post')
 
-    n_epoch = 5 # 600
+    n_epoch = 100 # 600
     print_freq = 1
     n_batch_epoch = int(n_images_train / batch_size)
     # exit()
@@ -231,7 +231,7 @@ def main_train():
             save_images(img_gen, [ni, ni], 'samples/step1_gan-cls/train_{:02d}.png'.format(epoch))
 
         ## save model
-        if (epoch != 0) and (epoch % 1) == 0:
+        if (epoch != 0) and (epoch % 50) == 0:
             tl.files.save_npz(net_cnn.all_params, name=net_cnn_name, sess=sess)
             tl.files.save_npz(net_rnn.all_params, name=net_rnn_name, sess=sess)
             tl.files.save_npz(net_g.all_params, name=net_g_name, sess=sess)
