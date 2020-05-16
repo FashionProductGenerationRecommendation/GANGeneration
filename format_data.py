@@ -31,7 +31,7 @@ for i,(key,value) in enumerate(dict_.items()):
 
 
 
-path = '~/fashion-dataset/images/'
+path = 'fashion-dataset/images/'
 files = os.listdir(path)
 # path1 = '/Users/Bharat/Desktop/Stony Brook/BigData/Project/Flower/text-to-image-master/untitled folder/data'
 path1 = '102flowers'
